@@ -25,7 +25,7 @@ class Server
             int receivedLength = clientSocket.Receive(buffer);
             string clientMessage = Encoding.ASCII.GetString(buffer, 0, receivedLength);
 
-            string serverResponse = "Привіт, клієнте!";
+            string serverResponse = "Hello client!";
             clientSocket.Send(Encoding.ASCII.GetBytes(serverResponse));
 
             Console.WriteLine($"о {DateTime.Now.ToString("HH:mm")} від [{clientIP}] отримано рядок: {clientMessage}");
