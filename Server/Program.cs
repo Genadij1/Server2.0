@@ -19,7 +19,7 @@ class Server
         while (true)
         {
             Socket clientSocket = await serverSocket.AcceptAsync();
-            _ = HandleClientAsync(clientSocket); // Fire-and-forget to handle multiple clients concurrently
+            _ = HandleClientAsync(clientSocket); 
         }
     }
 
